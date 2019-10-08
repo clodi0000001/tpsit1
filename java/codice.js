@@ -12,7 +12,24 @@ function aggiungiRiga(id_table){
     tbody.appendChild(tr);
 }
 function rimuoviRiga(){
-	if(document.removeChild && document.getElementById && document.getElementsByTagName) {
+    
+	var table = document.getElementById(id_table);	
+    var tbody = table.getElementsByTagName("tbody")[0];
+    var colonne = table.getElementsByTagName("th").length-1;
+    for( var i=colonne; i>1; i--)
+    {
+    tr.removeChild(tr);
+
+	 }
+}	
+
+/*
+   - Preleviamo il riferimento alla tabella e al tbody
+   - Calcoliamo il numero di colonne presenti
+   - Cicliamo e per ogni cella nuova chiediamo da prompt il testo
+   - Nidifichiamo il testo nel td e il td nel tr
+   - Aggiungiamo la nuova riga tr nel tbody 
+   	if(document.removeChild && document.getElementById && document.getElementsByTagName) {
 	if(i > 1){
 	var table = document.getElementById(id_table);	
     var tbody = table.getElementsByTagName("tbody")[0];
@@ -20,11 +37,4 @@ function rimuoviRiga(){
     tbody.removeChild(lastR);
 	i--
 	}
-    }	
-}
-/*
-   - Preleviamo il riferimento alla tabella e al tbody
-   - Calcoliamo il numero di colonne presenti
-   - Cicliamo e per ogni cella nuova chiediamo da prompt il testo
-   - Nidifichiamo il testo nel td e il td nel tr
-   - Aggiungiamo la nuova riga tr nel tbody */
+    }*/
