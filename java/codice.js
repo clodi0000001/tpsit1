@@ -12,15 +12,17 @@ function aggiungiRiga(id_table){
     tbody.appendChild(tr);
 }
 function rimuoviRiga(){
-    
-	var table = document.getElementById(id_table);	
-    var tbody = table.getElementsByTagName("tbody")[0];
-    var colonne = table.getElementsByTagName("th").length-1;
-    for( var i=colonne; i>1; i--)
-    {
-    tr.removeChild(tr);
 
-	 }
+    if(document.removeChild && document.getElementById && document.getElementsByTagName) {
+        if(i > 1){
+        var table = document.getElementById(id_table);	
+        var tbody = table.getElementsByTagName("tbody")[0];
+        var lastR = tbody.getElementsByTagName("tr")[(tbody.getElementsByTagName('tr').length)-1];
+        tbody.removeChild(lastR);
+        i--
+        }
+    }
+
 }	
 
 /*
@@ -29,12 +31,4 @@ function rimuoviRiga(){
    - Cicliamo e per ogni cella nuova chiediamo da prompt il testo
    - Nidifichiamo il testo nel td e il td nel tr
    - Aggiungiamo la nuova riga tr nel tbody 
-   	if(document.removeChild && document.getElementById && document.getElementsByTagName) {
-	if(i > 1){
-	var table = document.getElementById(id_table);	
-    var tbody = table.getElementsByTagName("tbody")[0];
-    var lastR = tbody.getElementsByTagName("tr")[(tbody.getElementsByTagName('tr').length)-1];
-    tbody.removeChild(lastR);
-	i--
-	}
-    }*/
+*/
