@@ -1,0 +1,29 @@
+<html>
+
+  <head>
+    <title> Tabella </title>
+      <link rel="stylesheet" href="css/bootstrap.css">
+	  <link rel="stylesheet" href="css/stile.css">
+	  <script type=text/Javascript src="java/codice.js"></script>
+  </head>
+
+  <body>
+    <center>
+      <table  border="1" id='id_table' class='table' cellspacing='0' cellpadding='0'>
+        <thead>
+          <tr>
+            <th><center> Nome </center></th>
+            <th><center> Cognome </center></th>
+            <th><center> Data di Nascita </center></th>
+          </tr>
+        </thead>
+        <tbody> </tbody>
+      </table> <br>
+    </center>
+    <center>
+      <input type="button" class="btn btn-outline-primary" value="Aggiungi riga" onclick="aggiungiRiga('id_table')">
+	  <input type="button" class="btn btn-outline-primary" value="Rimuovi riga" onclick="rimuoviRiga('id_table')">
+    </center>
+  </body>
+
+</html>
